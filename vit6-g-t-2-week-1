@@ -1,0 +1,72 @@
+#Soru 1: Ekrana 1'den 10'a kadar sayıları yazdıran bir Python kodu yazın.
+# for i in range(1,11):
+#     print(i, end=" ")
+
+
+# #Soru 2: Kullanıcıdan bir sayı girişi alın ve ekrana bu sayıya kadar 
+# # çift sayıları yazdıran bir Python programı yazın. 
+# # Bunu önce 'for' ile sonra da 'while' döngüleriyle yapın.
+
+# sayi = int(input("Bir Sayı Giriniz : "))
+# for i in range (1, sayi):
+#     if i %2 == 0:
+#         print(i)
+# i=1
+# while i < sayi:
+#     if i %2==0:
+#         print(i)
+#     i +=1
+
+# #Soru 3: Kullanıcıdan başlangıç ​​ve bitiş değerini alıp, bu değerler arasındaki 
+# # tüm sayıları (bitiş değeri dahil) ekrana yazdıran bir Python kodu yazınız.
+
+# secim1 = int(input("1. Sayıyı Giriniz : "))
+# secim2 = int(input("2. Sayıyı Giriniz : "))
+
+# for i in range(secim1, secim2 + 1):
+#     print(i)
+
+# #Soru 4: Kullanıcıdan bir sayı alın 
+# # ve bu sayının tek mi yoksa çift mi olduğunu yazdıran bir Python kodu yazın.
+
+# secim = int(input("Bir Sayı Giriniz : "))
+
+# if secim %2 == 0:
+#     print(secim , " Sayısı ÇİFT sayıdır")
+# else:
+#     print(secim, " Sayısı TEK sayıdır")
+
+#Soru 5: Kullanıcıdan pozitif bir tam sayı girişi alan 
+# ve faktöriyelini hesaplayan bir Python programı yazın. 
+# Faktöriyel, bir sayının kendisi ile 1 arasındaki tüm pozitif 
+# tam sayıların çarpımıdır. Örneğin: kullanıcı 5 girdiyse, 
+# program aşağıdaki çıktıyı vermelidir: 
+# Kullanıcıdan bir sayı girin: 5 Faktöriyel: 120
+
+while True:
+    secim = int(input("Bir Sayı Giriniz : "))
+    if secim < 1:
+        print(" *** Pozitif Bir Sayı Giriniz *** ")
+        continue
+    else:
+        fakt = 1
+        for i in range(1, secim+1):
+            fakt *= i
+
+        print(f"{secim} faktoriyel : {fakt}") 
+        break
+
+# # Soru 6: Kullanıcıdan bir sayı alan ve 
+# # bu sayının asal olup olmadığını kontrol eden bir Python kodu yazın.
+
+# sayi = int(input("Bir Sayı Giriniz : "))
+
+# if sayi > 1:
+#     for i in range(2, sayi ): 
+#         if sayi % i == 0:  # Eğer sayi, i'ye tam bölünüyorsa
+#             print(f"{sayi} asal bir sayı değildir.")
+#             break
+#     else:
+#         print(f"{sayi} asal bir sayıdır.")
+# else:
+#     print(f"{sayi} asal bir sayı değildir.")
