@@ -43,18 +43,18 @@
 # program aşağıdaki çıktıyı vermelidir: 
 # Kullanıcıdan bir sayı girin: 5 Faktöriyel: 120
 
-while True:
-    secim = int(input("Bir Sayı Giriniz : "))
-    if secim < 1:
-        print(" *** Pozitif Bir Sayı Giriniz *** ")
-        continue
-    else:
-        fakt = 1
-        for i in range(1, secim+1):
-            fakt *= i
+# while True:
+#     secim = int(input("Bir Sayı Giriniz : "))
+#     if secim < 1:
+#         print(" *** Pozitif Bir Sayı Giriniz *** ")
+#         continue
+#     else:
+#         fakt = 1
+#         for i in range(1, secim+1):
+#             fakt *= i
 
-        print(f"{secim} faktoriyel : {fakt}") 
-        break
+#         print(f"{secim} faktoriyel : {fakt}") 
+#         break
 
 # # Soru 6: Kullanıcıdan bir sayı alan ve 
 # # bu sayının asal olup olmadığını kontrol eden bir Python kodu yazın.
@@ -70,3 +70,91 @@ while True:
 #         print(f"{sayi} asal bir sayıdır.")
 # else:
 #     print(f"{sayi} asal bir sayı değildir.")
+
+######################################################################################################33
+
+
+# #Soru 7: Fibonacci dizisini hesaplayan ve sonucu belirli bir sınıra kadar sayı
+# #  içeren bir liste olarak döndüren bir döngü nasıl oluşturulur?
+
+# sinir = int(input("Sınır Sayısını Giriniz : "))
+# fibo_listesi = [0,1]
+
+# for i in range(1,sinir):
+#     yeni_sayi = fibo_listesi[-1]+fibo_listesi[-2]
+#     if yeni_sayi > sinir:
+#         break
+#     fibo_listesi.append(yeni_sayi)
+
+# print("Fibonacci Listesi : ",fibo_listesi)
+
+
+
+#Soru 8: Kullanıcıdan bir kelime alan ve 
+# bu kelimenin tersini ekrana yazdıran bir Python kodu yazın.
+
+# bir_kelime = input("Bir Kelime Giriniz : ")
+# print(bir_kelime[::-1])
+
+#Soru 9: Kullanıcıdan bir kelime girişi alan ve bu kelimenin 
+# bir palindrom olup olmadığını (geriye doğru okunduğunda da aynı) 
+# kontrol eden bir döngü ve koşullu ifade kombinasyonu nasıl oluşturulur?
+
+# bir_kelime = input("Bir Kelime Giriniz : ")
+# tersi = bir_kelime[::-1]
+# if tersi == bir_kelime:
+#     print(bir_kelime, " palindromdur")
+# else:
+#     print(bir_kelime, " palindrom değildir")
+
+
+# Soru 10: Kişinin kilo endeksini hesaplayan ve endeks değerine göre zayıf, 
+# kilolu veya fazla kilolu sonucunu döndüren kodu yazın. 
+# (Kilo endeksi hesaplaması için internete bakabilirsiniz) 
+# Bunun için kullanıcıdan kilo ve boy ölçülerini isteyin. 
+# Kilo endeksi 25'in altındaysa zayıf, 25-30 arasıysa normal, 
+# 30-40'ın üzerindeyse kilolusunuz. 40'ın üzerindeyse kilolusunuz.
+
+kilo = int(input("Kilonuz : "))
+boy = float(input("Boyunuz : (1.75 gibi ) "))
+endeks = kilo / (boy * boy)
+endeks_f = f"{endeks:.2f}"
+if endeks < 25:
+    print("Endeksiniz : ", endeks_f, " olup siz ZAYIF kategorisindesiniz")
+elif endeks >=25 and endeks <=30:
+    print("Endeksiniz : ", endeks_f, " olup siz NORMAL kategorisindesiniz")
+elif endeks >=31 and endeks<=40:
+    print("Endeksiniz : ", endeks_f, " olup siz KİLOLU kategorisindesiniz")
+else:
+    print("Endeksiniz : ", endeks_f, " olup siz OBEZ kategorisindesiniz")
+
+# Soru 11: Kullanıcının girdiği üç sayıdan en büyüğünü bulan bir Python programı nasıl yazılır?
+# sayi1 = int(input("1. Sayıyı Giriniz : "))
+# sayi2 = int(input("2. Sayıyı Giriniz : "))
+# sayi3 = int(input("3. Sayıyı Giriniz : "))
+
+# liste = []
+# liste.extend([sayi1,sayi2,sayi3])
+# max_sayi = max(liste)
+# print(max_sayi)
+
+# Soru 12: Herhangi bir ders için bir öğrenciden Vize ve Final notlarını alın. 
+# Vize sınav notunun %40'ı ile Final notunun %60'ının toplamı 
+# yıl sonu ortalamasını verecektir. Ortalama 50'nin altındaysa 
+# ekranda "FAILED" (BAŞARISIZ) yazısı, 50 veya üzeriyse ekranda 
+# "SUCCESSFUL" (BAŞARILI) yazısı görünecektir. 
+# Bu yazdırma işlemi 4 derstir ve dersler birbiri ardına yazılacaktır.
+
+# dersler = ["Matematik","Fizik","Kimya","Edebiyat"]
+
+# for ders in dersler:
+#     print(ders, "için notları giriniz ! ")
+#     vize = int(input("Vize Notunu Giriniz : "))
+#     final = int(input("Final Notunu Giriniz : "))
+#     yil_sonu_ort = (vize * .4) +(final * .6)
+#     if yil_sonu_ort < 50:
+#         print("\t",ders, " İçin Yıl Sonu Ortalamanız : " ,yil_sonu_ort ,"FAILED / BAŞARISIZ ")
+# else: 
+#     print("\t",ders, " İçin Yıl Sonu Ortalamanız : " ,yil_sonu_ort ,"SUCCESSFUL / BAŞARILI")
+
+
